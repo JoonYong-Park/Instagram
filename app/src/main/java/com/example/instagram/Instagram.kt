@@ -2,6 +2,7 @@ package com.example.instagram
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -186,8 +187,8 @@ fun Instagram(
         }
         Divider(
             modifier = Modifier
-                .fillMaxWidth(),     // 선 길이
-            // .padding(5.dp),    // 선 위아래 패딩
+                .fillMaxWidth()     // 선 길이
+                .padding(vertical = 5.dp),    // 선 위아래 패딩
             color = Color.Black,     // 선 색깔
             thickness = 0.8.dp       // 선 굵기
         )
@@ -212,7 +213,6 @@ fun Instagram(
                         verticalAlignment = Alignment.CenterVertically,
                         horizontalArrangement = Arrangement.SpaceBetween //
                     ) {
-
                         // 프로필, 이름
                         Row(
                             verticalAlignment = Alignment.CenterVertically,
@@ -231,7 +231,6 @@ fun Instagram(
                                 )
                             }*/
                             Image(
-
                                 painter = painterResource(id = R.drawable.aaaa),
                                 contentDescription = "Description",
                                 contentScale = ContentScale.Crop,
@@ -239,13 +238,13 @@ fun Instagram(
                                     .padding(10.dp)
                                     .clip(CircleShape)
                                     .size(40.dp)
-
                             )
                             androidx.compose.material3.Text(
                                 modifier = androidx.compose.ui.Modifier
                                     .background(androidx.compose.ui.graphics.Color.White)
                                     .padding(1.dp),             // 패딩 10dp
-                                fontSize = 20.sp, text = "joonyong_park"
+                                fontSize = 20.sp,
+                                text = "joonyong_park"
                             )
                         }
                         // 더보기
@@ -266,13 +265,13 @@ fun Instagram(
                             verticalAlignment = Alignment.CenterVertically,
                             horizontalArrangement = Arrangement.End //
                         ) {
-
                             // 왼쪽 정렬하고 싶은 아이콘
                             Row(
                                 modifier = Modifier
                                     .padding(5.dp)
                                     .fillMaxWidth(),
-                                horizontalArrangement = Arrangement.End
+                                horizontalArrangement = Arrangement.End,
+                                verticalAlignment = Alignment.CenterVertically
                             ) {
                                 IconButton(
                                     modifier = Modifier.size(20.dp),
